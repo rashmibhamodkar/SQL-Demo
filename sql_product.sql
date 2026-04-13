@@ -1,0 +1,14 @@
+SELECT * FROM batch1318_db.product;
+SELECT count(*) AS total_product FROM batch1318_db.product;
+SELECT min(qty) AS min_qty FROM batch1318_db.product;
+SELECT max(qty) AS max_qty FROM batch1318_db.product;
+SELECT sum(qty*price) AS total_revenue FROM batch1318_db.product;
+SELECT avg(price) AS avg_price FROM batch1318_db.product;
+SELECT (p_name) AS highprice_product FROM batch1318_db.product WHERE price>50000; 
+SELECT max(price) AS maxprice_product FROM batch1318_db.product;
+SELECT (p_name) AS highprice_product FROM batch1318_db.product WHERE price=(SELECT max(price) FROM batch1318_db.product);  
+SELECT max(price) FROM batch1318_db.product WHERE price <(SELECT max(price) FROM batch1318_db.product) ;
+SELECT min(price) FROM batch1318_db.product;
+SELECT min(price) FROM batch1318_db.product WHERE price >(SELECT min(price) FROM batch1318_db.product);
+SELECT min(price) FROM batch1318_db.product WHERE price >(SELECT min(price) FROM batch1318_db.product WHERE price >(SELECT min(price) FROM batch1318_db.product));
+SELECT max(price) FROM batch1318_db.product WHERE price <(SELECT max(price) FROM batch1318_db.product WHERE price <(SELECT max(price) FROM batch1318_db.product));

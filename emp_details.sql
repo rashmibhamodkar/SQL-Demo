@@ -1,0 +1,12 @@
+SELECT * FROM batch1318_db.emp_details;
+SELECT min(e_salary) FROM batch1318_db.emp_details ;
+SELECT avg(e_salary) FROM batch1318_db.emp_details;
+SELECT count(e_salary) FROM batch1318_db.emp_details;
+SELECT max(e_salary) FROM batch1318_db.emp_details;
+SELECT * FROM batch1318_db.emp_details WHERE e_name LIKE '_a%';
+SELECT * FROM batch1318_db.emp_details WHERE e_name LIKE '_o%';
+SELECT * FROM batch1318_db.emp_details WHERE e_name LIKE '_y%';
+SELECT * FROM batch1318_db.emp_details WHERE e_name LIKE '______';
+SELECT * FROM batch1318_db.emp_details WHERE e_name LIKE '%i';
+SELECT * FROM batch1318_db.emp_details WHERE e_name LIKE '%e%';
+SELECT min(e_salary) FROM batch1318_db.emp_details WHERE e_salary >(SELECT min(e_salary) FROM batch1318_db.emp_details WHERE e_salary >(SELECT min(e_salary) FROM batch1318_db.emp_details));
